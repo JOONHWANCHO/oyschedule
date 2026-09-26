@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026년 10월 조준환 근무 달력</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body {
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 min-h-screen py-8 px-4 sm:px-6">
+    <div class="max-w-4xl mx-auto">
+        <!-- Header -->
+        <div class="bg-white rounded-2xl shadow-sm p-6 mb-6 border border-slate-200">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div>
+                    <span class="text-emerald-600 font-bold text-sm tracking-wider uppercase">2026년 10월</span>
+                    <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-800 mt-1">조준환 님 근무 스케줄</h1>
+                </div>
+                <!-- Stats Badges -->
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                    <span class="px-3 py-1.5 rounded-full bg-amber-100 text-amber-800 border border-amber-200">주간 3회</span>
+                    <span class="px-3 py-1.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">석간 6회</span>
+                    <span class="px-3 py-1.5 rounded-full bg-indigo-100 text-indigo-800 border border-indigo-200">야간 12회</span>
+                    <span class="px-3 py-1.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200">휴무 10일</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Legend -->
+        <div class="bg-white rounded-xl shadow-sm p-4 mb-6 border border-slate-200 flex flex-wrap justify-center gap-4 text-xs font-medium">
+            <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded-md bg-amber-400 inline-block"></span>
+                <span class="text-slate-700">주간</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded-md bg-orange-400 inline-block"></span>
+                <span class="text-slate-700">석간</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded-md bg-indigo-500 inline-block"></span>
+                <span class="text-slate-700">야간</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <span class="w-3.5 h-3.5 rounded-md bg-slate-200 border border-slate-300 inline-block"></span>
+                <span class="text-slate-600">휴무</span>
+            </div>
+        </div>
+
+        <!-- Calendar Container -->
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden">
+            <!-- Days of Week Header -->
+            <div class="grid grid-cols-7 bg-slate-800 text-white text-center text-sm font-semibold py-3 border-b border-slate-700">
+                <div class="text-rose-400">일</div>
+                <div>월</div>
+                <div>화</div>
+                <div>수</div>
+                <div>목</div>
+                <div>금</div>
+                <div class="text-sky-400">토</div>
+            </div>
+
+            <!-- Calendar Grid -->
+            <div class="grid grid-cols-7 gap-px bg-slate-200">
+                
+                <!-- Week 1: Blank Leading Days (2026 Oct starts on Thursday) -->
+                <div class="bg-slate-50 min-h-[90px] sm:min-h-[105px] p-2"></div>
+                <div class="bg-slate-50 min-h-[90px] sm:min-h-[105px] p-2"></div>
+                <div class="bg-slate-50 min-h-[90px] sm:min-h-[105px] p-2"></div>
+                <div class="bg-slate-50 min-h-[90px] sm:min-h-[105px] p-2"></div>
+
+                <!-- 1일 (목) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">1</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 2일 (금) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">2</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 3일 (토) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-sky-600 text-sm">3</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- Week 2 -->
+                <!-- 4일 (일) - 주간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-rose-600 text-sm">4</span>
+                    <span class="bg-amber-400 text-amber-950 text-xs font-bold py-1 px-1.5 rounded-md text-center shadow-sm">주간</span>
+                </div>
+
+                <!-- 5일 (월) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">5</span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 6일 (화) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">6</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 7일 (수) - 휴무 -->
+                <div class="bg-emerald-50/60 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between border border-emerald-100">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-slate-700 text-sm">7</span>
+                        <span class="text-[10px] font-bold text-emerald-600">연휴</span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold py-1 px-1.5 rounded-md text-center border border-emerald-200">휴무</span>
+                </div>
+
+                <!-- 8일 (목) - 휴무 -->
+                <div class="bg-emerald-50/60 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between border border-emerald-100">
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-slate-700 text-sm">8</span>
+                        <span class="text-[10px] font-bold text-emerald-600">연휴</span>
+                    </div>
+                    <span class="bg-emerald-100 text-emerald-800 text-xs font-semibold py-1 px-1.5 rounded-md text-center border border-emerald-200">휴무</span>
+                </div>
+
+                <!-- 9일 (금) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-rose-600 text-sm">9 <span class="text-[10px] font-normal">한글날</span></span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 10일 (토) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-sky-600 text-sm">10</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- Week 3 -->
+                <!-- 11일 (일) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-rose-600 text-sm">11</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 12일 (월) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">12</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 13일 (화) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">13</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 14일 (수) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">14</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 15일 (목) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">15</span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 16일 (금) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">16</span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 17일 (토) - 주간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-sky-600 text-sm">17</span>
+                    <span class="bg-amber-400 text-amber-950 text-xs font-bold py-1 px-1.5 rounded-md text-center shadow-sm">주간</span>
+                </div>
+
+                <!-- Week 4 -->
+                <!-- 18일 (일) - 주간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-rose-600 text-sm">18</span>
+                    <span class="bg-amber-400 text-amber-950 text-xs font-bold py-1 px-1.5 rounded-md text-center shadow-sm">주간</span>
+                </div>
+
+                <!-- 19일 (월) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">19</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 20일 (화) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">20</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 21일 (수) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">21</span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 22일 (목) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">22</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 23일 (금) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">23</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 24일 (토) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-sky-600 text-sm">24</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- Week 5 -->
+                <!-- 25일 (일) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-rose-600 text-sm">25</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 26일 (월) - 석간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">26</span>
+                    <span class="bg-orange-400 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">석간</span>
+                </div>
+
+                <!-- 27일 (화) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">27</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 28일 (수) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">28</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 29일 (목) - 휴무 -->
+                <div class="bg-slate-50/80 min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">29</span>
+                    <span class="bg-slate-200 text-slate-600 text-xs font-medium py-1 px-1.5 rounded-md text-center border border-slate-300">휴무</span>
+                </div>
+
+                <!-- 30일 (금) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-slate-700 text-sm">30</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+                <!-- 31일 (토) - 야간 -->
+                <div class="bg-white min-h-[90px] sm:min-h-[105px] p-2 flex flex-col justify-between">
+                    <span class="font-bold text-sky-600 text-sm">31</span>
+                    <span class="bg-indigo-500 text-white text-xs font-medium py-1 px-1.5 rounded-md text-center shadow-sm">야간</span>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Summary Note -->
+        <div class="mt-6 bg-white rounded-xl p-4 border border-slate-200 text-xs text-slate-600 leading-relaxed">
+            <p class="font-semibold text-slate-800 mb-1">💡 일정 참고사항</p>
+            <ul class="list-disc list-inside space-y-1">
+                <li>총 근무일수: <strong class="text-slate-800">21일</strong> (주간 3일, 석간 6일, 야간 12일)</li>
+                <li>총 휴무일수: <strong class="text-slate-800">10일</strong></li>
+                <li>연속 휴무일: <strong class="text-emerald-700">10월 7일(수) ~ 10월 8일(목)</strong> (2일 연속)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
